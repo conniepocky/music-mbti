@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your MBTI Result</title>
+    <link rel="stylesheet"  type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Your MBTI Type is:</h1>
+        <p id="mbti-result"></p>
+        <p>Based on your Spotify music preferences!</p>
+
+    </div>
+
+    <div id="tsparticles"></div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const mbtiType = params.get("mbti");
+
+        document.getElementById("mbti-result").innerText = mbtiType;
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/preset-fireworks@3/tsparticles.preset.fireworks.bundle.min.js"></script>
+    <script src="particlecode.js"></script>
+</body>
+</html>
