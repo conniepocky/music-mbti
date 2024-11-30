@@ -1,4 +1,4 @@
 document.getElementById("spotify-login").addEventListener("click", () => {
-    window.location.href = "http://localhost:3000/login";
+    window.location.href = "https://spotify-mbti.onrender.com/login";
   });
   

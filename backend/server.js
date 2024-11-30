@@ -5,9 +5,9 @@ const cors = require("cors");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const CLIENT_ID = "cd2f2b18040840dbb309819867b80e25";
-const CLIENT_SECRET = "1732d834e9f14d96a01a92a76f59a69d";
-const REDIRECT_URI = "http://localhost:3000/callback";
+const CLIENT_ID = process.env.CLIENT_ID;
+const CLIENT_SECRET = process.env.CLIENT_SECRET;
+const REDIRECT_URI = "https://spotify-mbti.onrender.com/callback";
 
 app.use(cors());
 app.use(express.json());
