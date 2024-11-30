@@ -50,7 +50,7 @@ app.get("/callback", async (req, res) => {
     const accessToken = tokenData.access_token;
 
     const topArtistsResponse = await fetch(
-        "https://api.spotify.com/v1/me/top/artists?limit=20",
+        "https://api.spotify.com/v1/me/top/artists",
         {
         headers: {
         Authorization: `Bearer ${accessToken}`,
@@ -58,7 +58,7 @@ app.get("/callback", async (req, res) => {
     });
 
     const topTracksResponse = await fetch(
-        "https://api.spotify.com/v1/me/top/tracks?limit=20",
+        "https://api.spotify.com/v1/me/top/tracks",
         {
         headers: {
         Authorization: `Bearer ${accessToken}`,
