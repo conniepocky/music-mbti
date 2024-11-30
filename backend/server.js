@@ -3,7 +3,7 @@ const fetch = require("node-fetch");
 const cors = require("cors");
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 const CLIENT_ID = "cd2f2b18040840dbb309819867b80e25";
 const CLIENT_SECRET = "1732d834e9f14d96a01a92a76f59a69d";
