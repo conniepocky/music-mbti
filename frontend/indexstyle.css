@@ -1,9 +1,9 @@
-
 html, body {
     height: 100%;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
+    background-color: #121212;
     overflow-x: hidden;
 }
 
@@ -22,7 +22,8 @@ html, body {
 
 .container {
     max-width: 600px;
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
 }
 
 button {
@@ -61,7 +62,6 @@ u {
     text-decoration-thickness: 5px;
 }
   
-
 ul {
     text-align: left;
     margin-top: 20px;
@@ -95,30 +95,32 @@ html {
     cursor: pointer;
 }
 
-@media (max-width: 768px) { 
-    html, body { font-size: 16px; }
-
-    h1 {
-        font-size: 24px;
-    }
-    
-    h2 {
-        font-size: 20px;
+@media (max-width: 768px) {
+    .section {
+        padding: 10px;
     }
 
-    .section { padding: 10px; }
+    button {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
 
-    .container { max-width: 400px; }
+    footer {
+        font-size: 12px;
+    }
 
-    button { padding: 10px 20px; font-size: 14px; }
+    ul, p {
+        font-size: 16px;
+        line-height: 1.4;
+    }
 
-    footer { padding: 5px 10px; font-size: 12px; }
+    .container {
+        max-width: 100%;
+        padding: 10px;
+    }
 
-    ul { margin-top: 10px; padding-left: 10px; }
-
-    li { margin-bottom: 10px; font-size: 16px; }
-
-    p { font-size: 16px; }
-
-    .explanation-container { padding: 20px; } 
+    .explanation-container {
+        padding: 20px;
+        box-shadow: none;
+    }
 }
