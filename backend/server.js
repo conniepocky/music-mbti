@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/login", (req, res) => {
-    const scopes = "user-top-read user-library-read";
+    const scopes = "user-top-read";
     const spotifyAuthURL = `https://accounts.spotify.com/authorize?client_id=${CLIENT_ID}&response_type=code&redirect_uri=${encodeURIComponent(
     REDIRECT_URI
     )}&scope=${encodeURIComponent(scopes)}`;
@@ -50,7 +50,7 @@ app.get("/callback", async (req, res) => {
     const accessToken = tokenData.access_token;
 
     const topArtistsResponse = await fetch(
-        "https://api.spotify.com/v1/me/top/artists",
+        "https://api.spotify.com/v1/me/top/artists?limit=20",
         {
         headers: {
         Authorization: `Bearer ${accessToken}`,
@@ -58,14 +58,15 @@ app.get("/callback", async (req, res) => {
     });
 
     const topTracksResponse = await fetch(
-        "https://api.spotify.com/v1/me/top/tracks",
+        "https://api.spotify.com/v1/me/top/tracks?limit=20",
         {
         headers: {
         Authorization: `Bearer ${accessToken}`,
         },
     });
 
-    console.log(topArtistsResponse);
+    console.log(topArtistsResponse.json());
+    console.log(topTracksResponse.status);
 
     const topTracks = await topTracksResponse.json();
 
