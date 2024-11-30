@@ -95,3 +95,30 @@ html {
     cursor: pointer;
 }
 
+@media (max-width: 768px) { 
+    html, body { font-size: 16px; }
+
+    h1 {
+        font-size: 24px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+
+    .section { padding: 10px; }
+
+    .container { max-width: 400px; }
+
+    button { padding: 10px 20px; font-size: 14px; }
+
+    footer { padding: 5px 10px; font-size: 12px; }
+
+    ul { margin-top: 10px; padding-left: 10px; }
+
+    li { margin-bottom: 10px; font-size: 16px; }
+
+    p { font-size: 16px; }
+
+    .explanation-container { padding: 20px; } 
+}
