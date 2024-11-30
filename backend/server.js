@@ -66,7 +66,6 @@ app.get("/callback", async (req, res) => {
     });
 
     const clonedArtistsResponse = topArtistsResponse.clone();
-    console.log("Top Artists Response Body:", await clonedArtistsResponse.text());
 
     if (!topArtistsResponse.ok) {
         throw new Error(`Failed to fetch top artists: ${topArtistsResponse.statusText}`);
