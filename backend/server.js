@@ -65,9 +65,11 @@ app.get("/callback", async (req, res) => {
         },
     });
 
-    const topTracks = await topTracksResponse.json(JSON.stringify(topTracksResponse));
+    console.log(topArtistsResponse);
 
-    const topArtists = await topArtistsResponse.json(JSON.stringify(topArtistsResponse));
+    const topTracks = await topTracksResponse.json();
+
+    const topArtists = await topArtistsResponse.json();
 
     const mbtiType = inferMBTI(topArtists.items, topTracks.items);
 
