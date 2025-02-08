@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3000;
 
 const CLIENT_ID = process.env.CLIENT_ID;
 const CLIENT_SECRET = process.env.CLIENT_SECRET;
-const REDIRECT_URI = "https://spotify-mbti.onrender.com/callback";
+const REDIRECT_URI = "https://music-mbti.onrender.com/callback";
 
 app.use(cors());
 app.use(express.json());
